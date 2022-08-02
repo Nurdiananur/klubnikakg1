@@ -10,7 +10,21 @@ class AppString {
   }
 
 
-  final String signInTitle = 'Вход';
+  final String signInTitle = 'Кирүү';
   final String login = 'Логин';
+  final String signUp = 'Каталуу';
   final String password = 'Пароль';
+  final String splashtext = 'Клубника Кыргызстанга кош келдиңиз';
+  final String phone = 'Телефон номериңиз';
+  final String name = 'Колдонуучунун аты';
+  final String type = 'Кулпунайдын сорту';
+  final String date = 'Отургузган датасы';
+  final String passwordto = 'Сыр сөз';
+  final String againpass = 'Сыр сөздү кайтала';
+  final String akaunt = 'Аккаунтуңуз барбы?';
 }
+
+
+
+
+

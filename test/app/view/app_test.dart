@@ -7,7 +7,7 @@
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:klubnikakg1/app/app.dart';
-import 'package:klubnikakg1/counter/counter.dart';
+import 'package:klubnikakg1/module/counter/view/counter_page.dart';
 
 void main() {
   group('App', () {
