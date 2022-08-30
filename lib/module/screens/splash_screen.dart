@@ -1,11 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:klubnikakg1/constant/string.dart';
-import 'package:klubnikakg1/module/counter/view/counter_page.dart';
 import 'package:klubnikakg1/module/sign_in/page/view/mobile_view.dart';
-
 import '../sign_up/sign_up.dart';
 
 
@@ -23,7 +20,7 @@ class _SplachScreenState extends State<SplachScreen> {
     Timer(
         Duration(seconds: 5),
             () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => SignUp())));
+            context, MaterialPageRoute(builder: (context) => SignIn())));
   }
   Widget build(BuildContext context) {
     final string = AppString.instance;
@@ -36,15 +33,11 @@ class _SplachScreenState extends State<SplachScreen> {
           children: [
             // Image.asset('assets/клубника.png'),
           Image.asset(
-               'assets/klubnika.png',
-               width: 130,
-               height: 162,
+               'assets/icon/MeLog.png',
+               width: 300,
+               height: 258,
                fit: BoxFit.cover,
              ),
-
-
-
-
             // SvgPicture.asset(
             //     'assets/Клубника.svg',
             // ),

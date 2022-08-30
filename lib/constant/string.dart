@@ -20,6 +20,7 @@ class AppString {
   final String type = 'Кулпунайдын сорту';
   final String date = 'Отургузган датасы';
   final String passwordto = 'Сыр сөз';
+  final String forgotpass= 'Сырдык сөздү унуттуңузбу?';
   final String againpass = 'Сыр сөздү кайтала';
   final String akaunt = 'Аккаунтуңуз барбы?';
 }

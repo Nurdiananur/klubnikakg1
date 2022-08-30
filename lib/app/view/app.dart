@@ -10,6 +10,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'package:klubnikakg1/l10n/l10n.dart';
 import 'package:klubnikakg1/module/screens/splash_screen.dart';
+import 'package:klubnikakg1/module/sign_in/page/view/mobile_view.dart';
 import 'package:klubnikakg1/module/sign_up/sign_up.dart';
 
 import '../../module/counter/view/counter_page.dart';
@@ -32,7 +33,7 @@ class App extends StatelessWidget {
         GlobalMaterialLocalizations.delegate,
       ],
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const SignUp(),
+      home: SplachScreen(),
     );
   }
 }

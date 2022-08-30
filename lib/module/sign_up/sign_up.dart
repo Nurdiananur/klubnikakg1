@@ -1,10 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:klubnikakg1/app/app.dart';
 import 'package:klubnikakg1/constant/spaces.dart';
 import 'package:klubnikakg1/constant/string.dart';
 import 'package:klubnikakg1/module/sign_up/button.dart';
-import 'package:klubnikakg1/widgets/build_email.dart';
 import 'package:klubnikakg1/widgets/tab_bar/widgets.dart';
 
 class SignUp extends StatefulWidget {
@@ -20,9 +18,7 @@ class _SignUpState extends State<SignUp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter demo',
-      theme: ThemeData(
-
-      ),
+      theme: ThemeData(),
       home: MyHome(),
     );
   }
@@ -42,10 +38,11 @@ class MyHome extends StatelessWidget {
         Column(
 
           children: [
+            space.sized15,
             Image.asset(
-              'assets/klubnika.png',
-              width: 75,
-              height: 94,
+              'assets/icon/MeLog1.png',
+              width: 100,
+              height: 100,
               fit: BoxFit.cover,
             ),
             space.sized15,
@@ -64,19 +61,13 @@ class MyHome extends StatelessWidget {
             SignInEleveted(),
             space.sized25,
             RichText(text: TextSpan(
-
                 children: [
-                  TextSpan(text: string.akaunt),
+                  TextSpan(text: string.akaunt, style: TextStyle(color: Colors.black)),
                   TextSpan(text: string.signInTitle,style: TextStyle(color: Colors.green),
                     recognizer: TapGestureRecognizer()..onTap = () {},),
-
                 ]
             ),
             )
-
-
-
-
           ],
         ),
       ),
