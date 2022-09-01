@@ -1,3 +1,6 @@
+
+
+
 import 'package:flutter/material.dart';
 import 'package:klubnikakg1/app/view/app.dart';
 
@@ -14,69 +17,197 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
-        padding: EdgeInsets.all(23),
+        padding: EdgeInsets.all(10),
         child: SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Text('Салам Улан', style:TextStyle(fontSize: 22),),
 
-              Image.asset(
-                'assets/icon/Rectangle 3054 (1).png',
+              Stack(
+                children:[
+                  Container(
+                  width: 435,
+                  height: 123,
+                  child: Image.asset(
+                    'assets/icon/Rectangle 3054 (1).png',
 
-                fit: BoxFit.cover,
-              ),
-              Card(
-                shadowColor: Colors.red,
-                elevation: 8,
-                clipBehavior: Clip.antiAlias,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(24)
-                ),
-                child: Container(
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        Colors.redAccent, Colors.blue
-                      ],
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter
-                    )
+                    fit: BoxFit.cover,
                   ),
-                  padding: EdgeInsets.all(16),
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      Text('sdfgsfg'),
-                      Ink.image(image: AssetImage('assets/icon/straw.png'),
+                ),
+               Padding(
+                 padding: const EdgeInsets.only(top: 44,left: 70),
+                 child: Text('Эр эмгегин жер жебейт', style: TextStyle(fontSize: 27)),
+               )
+                ],
+      ),
+              Row(
+                children: [
+                  Card(
+                    shadowColor: Colors.red,
+                    elevation: 8,
+                    clipBehavior: Clip.antiAlias,
+
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(24)
+                    ),
+                    child: Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text('Сорттор', style: TextStyle(fontSize: 20),),
+                            ),
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20)
+                      ),
+                      child: Ink.image(image: AssetImage('assets/icon/straw.png'),
                         child: InkWell(
                             onTap:(){}
                         ),
-                        height: 300,
-                        fit: BoxFit.cover,
-                      ),
-                    ],
+                        height: 190,
+                        width: 187,
+
+                          ),
+                    ),
+
+
+]
+                        ),
+                      ],
+                    ),
                   ),
-                ),
+
+
+
+
+                  Card(
+                    shadowColor: Colors.red,
+                    elevation: 8,
+                    clipBehavior: Clip.antiAlias,
+
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(24)
+                    ),
+                    child: Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text('Кеңештер', style: TextStyle(fontSize: 20),),
+                              ),
+                              Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20)
+                                ),
+                                child: Ink.image(image: AssetImage('assets/icon/adwi.png'),
+                                  child: InkWell(
+                                      onTap:(){}
+                                  ),
+                                  height: 190,
+                                  width: 187,
+
+                                ),
+                              ),
+
+
+                            ]
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               ),
-              Card(
-                clipBehavior: Clip.antiAlias,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(24)
-                ),
-                child: Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    Text('sfgsfgsdfg'),
-                    Ink.image(image: AssetImage('assets/icon/straw.png'),
-                    child: InkWell(
-                      onTap:(){}
+
+
+
+
+              Row(
+                children: [
+                  Card(
+                    shadowColor: Colors.red,
+                    elevation: 8,
+                    clipBehavior: Clip.antiAlias,
+
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(24)
                     ),
-                    height: 300,
-                      fit: BoxFit.cover,
+                    child: Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text('Агрокомплекс', style: TextStyle(fontSize: 20),),
+                              ),
+                              Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20)
+                                ),
+                                child: Ink.image(image: AssetImage('assets/icon/cor.png'),
+                                  child: InkWell(
+                                      onTap:(){}
+                                  ),
+                                  height: 190,
+                                  width: 187,
+
+
+                                ),
+                              ),
+
+
+                            ]
+                        ),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                  Card(
+                    shadowColor: Colors.red,
+                    elevation: 8,
+                    clipBehavior: Clip.antiAlias,
+
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(24)
+                    ),
+                    child: Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text('Биз жөнүндө', style: TextStyle(fontSize: 20),),
+                              ),
+                              Container(
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(20)
+                                ),
+                                child: Ink.image(image: AssetImage('assets/icon/MeLog1.png'),
+                                  child: InkWell(
+                                      onTap:(){}
+                                  ),
+                                  height: 190,
+                                  width: 187,
+
+
+                                ),
+                              ),
+
+
+                            ]
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
               )
             ],
           ),

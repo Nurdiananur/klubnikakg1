@@ -28,7 +28,7 @@ class SignInEleveted extends StatelessWidget {
 
   },
   child: Text(
-      'fsfs'
+      'Кируу'
     ),
   ),
     );
