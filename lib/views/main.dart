@@ -17,7 +17,7 @@ class _MainState extends State<Main> {
     const Home(),
     const Sppage(),
     const Myorder(),
-    const Menu()
+    MyApp()
   ];
   @override
   Widget build(BuildContext context) {

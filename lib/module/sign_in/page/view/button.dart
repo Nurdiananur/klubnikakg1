@@ -17,6 +17,9 @@ class SignInEleveted extends StatelessWidget {
 
       height: 48,
       child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          primary: Colors.green
+        ),
         onPressed: () {
       Navigator.push(
         context,
