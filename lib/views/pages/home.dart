@@ -3,6 +3,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:klubnikakg1/app/view/app.dart';
+import 'package:klubnikakg1/module/home/agrokompless/tovarlar.dart';
+
+import '../../module/home/class/sort.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -68,7 +71,15 @@ class _HomeState extends State<Home> {
                       ),
                       child: Ink.image(image: AssetImage('assets/icon/straw.png'),
                         child: InkWell(
-                            onTap:(){}
+                            onTap:(){
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const Sorts(),
+                                ),
+                              );
+
+                            }
                         ),
                         height: 190,
                         width: 187,
@@ -154,7 +165,14 @@ class _HomeState extends State<Home> {
                                 ),
                                 child: Ink.image(image: AssetImage('assets/icon/cor.png'),
                                   child: InkWell(
-                                      onTap:(){}
+                                      onTap:(){
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) => const Tovar(),
+                                          ),
+                                        );
+                                      }
                                   ),
                                   height: 190,
                                   width: 187,
