@@ -11,9 +11,7 @@ class _TovarState extends State<Tovar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-
-      ),
+      appBar: AppBar(),
       body: Column(
         children: [
           Text('Товарлар', style: TextStyle(fontSize: 30),)

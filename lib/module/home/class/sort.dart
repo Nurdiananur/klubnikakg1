@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:klubnikakg1/module/home/class/alba.dart';
 import 'package:klubnikakg1/module/home/class/albion.dart';
+import 'package:klubnikakg1/module/home/class/asia.dart';
 import 'package:klubnikakg1/module/home/class/kochot/kleri.dart';
 
 class Sorts extends StatefulWidget {
@@ -59,10 +60,17 @@ class _SortsState extends State<Sorts> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               GestureDetector(child: Image(image: AssetImage('assets/Азия.png'),),
-                onTap: () {},
+                onTap: () {Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Asia(),
+                  ),
+                );},
               ),
               GestureDetector(child: Image(image: AssetImage('assets/Брилло.png'),),
-              onTap: () {},),
+              onTap: () {
+
+              },),
               GestureDetector(child: Image(image: AssetImage('assets/Мурано.png'),),
               onTap: () {},),
               GestureDetector(child: Image(image: AssetImage('assets/Мурано.png'),),
