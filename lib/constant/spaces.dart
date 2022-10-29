@@ -19,5 +19,9 @@ class AppSpace {
   final sized25 = const SizedBox(height: 25);
   final sized30 = const SizedBox(height: 30);
   final sized42 = const SizedBox(height: 42);
+  final sized82 = const SizedBox(height: 82);
   final sized125 = const SizedBox(height: 125);
+  final sized225 = const SizedBox(height: 225);
+
+  final sized26 = const SizedBox(width: 25);
 }

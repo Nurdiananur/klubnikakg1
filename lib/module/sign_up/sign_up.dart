@@ -5,6 +5,8 @@ import 'package:klubnikakg1/constant/string.dart';
 import 'package:klubnikakg1/module/sign_up/button.dart';
 import 'package:klubnikakg1/widgets/tab_bar/widgets.dart';
 
+import '../../main.dart';
+
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
 
@@ -64,7 +66,9 @@ class MyHome extends StatelessWidget {
                 children: [
                   TextSpan(text: string.akaunt, style: TextStyle(color: Colors.black)),
                   TextSpan(text: string.signInTitle,style: TextStyle(color: Colors.green),
-                    recognizer: TapGestureRecognizer()..onTap = () {},),
+                    recognizer: TapGestureRecognizer()..onTap = () {
+
+                    },),
                 ]
             ),
             )

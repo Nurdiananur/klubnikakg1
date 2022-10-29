@@ -15,6 +15,11 @@ import 'package:klubnikakg1/module/sign_up/sign_up.dart';
 
 import '../../module/counter/view/counter_page.dart';
 
+
+void main() {
+  runApp(const App());
+}
+
 class App extends StatelessWidget {
   const App({super.key});
 

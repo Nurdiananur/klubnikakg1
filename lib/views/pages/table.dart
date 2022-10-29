@@ -1,53 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:intl/date_symbol_data_local.dart';
+import 'package:table_calendar/table_calendar.dart';
 
-class DatePickerDemo extends StatefulWidget {
+
+class StartPage extends StatefulWidget {
   @override
-  _DatePickerDemoState createState() => _DatePickerDemoState();
+  _StartPageState createState() => _StartPageState();
 }
 
-class _DatePickerDemoState extends State<DatePickerDemo> {
-  /// Which holds the selected date
-  /// Defaults to today's date.
-  DateTime selectedDate = DateTime.now();
-
-  _selectDate(BuildContext context) async {
-    final DateTime? picked = await showDatePicker(
-      context: context,
-      initialDate: selectedDate,
-      firstDate: DateTime(2000),
-      lastDate: DateTime(2025),
-    );
-    if (picked != null && picked != selectedDate)
-      setState(() {
-        selectedDate = picked;
-      });
-  }
-
+class _StartPageState extends State<StartPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('TableCalendar Example'),
+      ),
       body: Center(
         child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            Text(
-              "${selectedDate.toLocal()}".split(' ')[0],
-              style: TextStyle(fontSize: 55, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(
-              height: 20.0,
-            ),
-            RaisedButton(
-              onPressed: () => _selectDate(context),
-              child: Text(
-                'Select date',
-                style:
-                TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-              ),
-              color: Colors.greenAccent,
-            ),
-          ],
-        ),
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+        TableCalendar(
+        firstDay: DateTime.utc(2010, 10, 16),
+        lastDay: DateTime.utc(2030, 3, 14),
+        focusedDay: DateTime.now(),
+      ),
+          ]
+        )
+
       ),
     );
   }

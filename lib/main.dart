@@ -4,6 +4,12 @@ import 'package:klubnikakg1/views/pages/home.dart';
 import 'package:klubnikakg1/views/pages/menupage.dart';
 import 'package:klubnikakg1/views/pages/myorder.dart';
 import 'package:klubnikakg1/views/pages/sppage.dart';
+
+
+void main() {
+  runApp(const Main());
+}
+
 class Main extends StatefulWidget {
   const Main({Key? key}) : super(key: key);
 

@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../constant/string.dart';
-import '../../../../views/main.dart';
+import '../../../../main.dart';
 
 
 class SignInEleveted extends StatelessWidget {

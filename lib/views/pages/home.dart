@@ -1,10 +1,12 @@
 
-
-
 import 'package:flutter/material.dart';
 import 'package:klubnikakg1/app/view/app.dart';
+import 'package:klubnikakg1/module/home/about%20us/aboutus.dart';
+import 'package:klubnikakg1/module/home/adwises/keneshter.dart';
 import 'package:klubnikakg1/module/home/agrokompless/tovarlar.dart';
 
+import '../../constant/spaces.dart';
+import '../../constant/string.dart';
 import '../../module/home/class/sort.dart';
 
 class Home extends StatefulWidget {
@@ -17,17 +19,16 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
+    final string = AppString.instance;
+    final space = AppSpace.instance;
     return Scaffold(
-      appBar: AppBar(),
       body: Padding(
         padding: EdgeInsets.all(10),
         child: SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Салам Улан', style:TextStyle(fontSize: 22),),
 
               Stack(
                 children:[
@@ -36,16 +37,16 @@ class _HomeState extends State<Home> {
                   height: 123,
                   child: Image.asset(
                     'assets/icon/Rectangle 3054 (1).png',
-
                     fit: BoxFit.cover,
                   ),
                 ),
                Padding(
-                 padding: const EdgeInsets.only(top: 44,left: 70),
+                 padding: const EdgeInsets.only(top: 44,left: 30),
                  child: Text('Эр эмгегин жер жебейт', style: TextStyle(fontSize: 27)),
                )
                 ],
       ),
+              space.sized25,
               Row(
                 children: [
                   Card(
@@ -120,7 +121,12 @@ class _HomeState extends State<Home> {
                                 ),
                                 child: Ink.image(image: AssetImage('assets/icon/adwi.png'),
                                   child: InkWell(
-                                      onTap:(){}
+                                      onTap:(){Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                          builder: (context) => const Kenesh(),
+                                        ),
+                                      );}
                                   ),
                                   height: 190,
                                   width: 187,
@@ -210,7 +216,14 @@ class _HomeState extends State<Home> {
                                 ),
                                 child: Ink.image(image: AssetImage('assets/icon/MeLog1.png'),
                                   child: InkWell(
-                                      onTap:(){}
+                                      onTap:(){
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) => const AboutUs(),
+                                          ),
+                                        );
+                                      }
                                   ),
                                   height: 190,
                                   width: 187,

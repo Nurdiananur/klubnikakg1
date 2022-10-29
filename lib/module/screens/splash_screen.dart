@@ -33,7 +33,7 @@ class _SplachScreenState extends State<SplachScreen> {
           children: [
             // Image.asset('assets/клубника.png'),
           Image.asset(
-               'assets/icon/MeLog.png',
+               'assets/icon/ic_launcher.png',
                width: 300,
                height: 258,
                fit: BoxFit.cover,

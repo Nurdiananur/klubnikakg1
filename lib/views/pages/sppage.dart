@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:klubnikakg1/constant/string.dart';
 
+import 'package:klubnikakg1/widgets/task.dart';
+
 import '../../constant/spaces.dart';
 
 class Sppage extends StatefulWidget {
@@ -17,7 +19,7 @@ class _SppageState extends State<Sppage> {
     final string = AppString.instance;
     final space = AppSpace.instance;
     return Scaffold(
-      backgroundColor: Colors.redAccent,
+      backgroundColor: Colors.yellow[50],
       body:
       SingleChildScrollView(
         child: Column(
@@ -25,25 +27,29 @@ class _SppageState extends State<Sppage> {
 
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(3.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Image.asset(
-                    'assets/icon/green.png',
-                    fit: BoxFit.cover,
-                  ),
-                ],
-              ),
+           Stack(
+             children: [
+        Padding(
+        padding: const EdgeInsets.all(3.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Image.asset(
+              'assets/icon/green.png',
+              fit: BoxFit.cover,
             ),
+          ],
+        ),
+        ),
+               Padding(
+                 padding: const EdgeInsets.only(top: 90, left: 100),
+                 child: Text('Билдирүү', style: TextStyle(fontSize: 28,
+                     fontWeight:FontWeight.w700,
+                     color: Colors.green), ),
+               ),
+             ],
+           ),
 
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text('Билдирүү', style: TextStyle(fontSize: 28,
-                  fontWeight:FontWeight.w700,
-                  color: Colors.green), ),
-            ),
             Container(
               width: 315,
               height: 160,
@@ -72,7 +78,13 @@ class _SppageState extends State<Sppage> {
               ),
             ),
             space.sized15,
-
+            Padding(
+              padding: const EdgeInsets.only(left: 40, ),
+              child: Text('Бугунку жумуштар', style: TextStyle(fontSize: 20,
+                  fontWeight:FontWeight.w700,
+                  color: Colors.green), ),
+            ),
+            space.sized15,
             Container(
               width: 315,
               height: 292,
@@ -80,7 +92,26 @@ class _SppageState extends State<Sppage> {
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(20)
               ),
+              child: Padding(
+                padding: const EdgeInsets.all(20),
+                child: Column(
+                  children: [
+
+                    Text('Кечки кулпунайды тердим', style: TextStyle(fontSize: 18)),
+                    space.sized15,
+                    Task(text: 'Танкы кулпунайды тердим', isDone: false,),
+                    space.sized15,
+                    Task(text: 'Кулпунайды сугардым ',isDone: false,),
+                    space.sized15,
+                    Task(text: 'Мурутчаларын кырктым',isDone: false,),
+                    space.sized15,
+                    Task(text: 'Кечки кулпунайды тердим',isDone: false,),
+
+                  ],
+                ),
               ),
+              ),
+
             Image.asset(
               'assets/icon/green1.png',
               fit: BoxFit.cover,
