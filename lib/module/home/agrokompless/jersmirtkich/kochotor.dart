@@ -8,7 +8,9 @@ class Kocottor extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: SingleChildScrollView(
-        child:Column(),
+        child:Column(
+
+        ),
       ),
     );
   }

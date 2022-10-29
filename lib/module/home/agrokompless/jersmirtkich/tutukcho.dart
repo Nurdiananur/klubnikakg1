@@ -12,7 +12,9 @@ class _TutukchoState extends State<Tutukcho> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: SingleChildScrollView(),
+      body: SingleChildScrollView(
+
+      ),
     );
   }
 }

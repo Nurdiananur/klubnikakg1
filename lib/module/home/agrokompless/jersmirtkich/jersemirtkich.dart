@@ -22,6 +22,7 @@ class JetSemirtkich extends StatelessWidget {
           Image(image:  AssetImage('assets/rutkat.png'),),
             Text('Руткат', style: TextStyle(fontSize: 20),),
             space.sized25,
+
             const Text('''
             Руткат - тамыр системасынын биостимулятору.
             Тамырдын түкчөлөрүн сиңирүүнү стимулдайт 
